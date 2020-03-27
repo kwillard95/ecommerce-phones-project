@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { ProductConsumer } from '../context'
+import ProductList from './ProductList';
 
 export default class Product extends Component {
   render() {
@@ -13,7 +14,9 @@ export default class Product extends Component {
             <Link to="/details">
               <img src={img} alt="product" className="card-img-top"/>
             </Link>
-
+             <button className="cart-btn" disabled={inCart ? true : false} onClick={() => {console.log('added to cart')}}>
+             {inCart ? (<p className="text-capitalize mb-0" disabled>in cart</p>) : (<i className="fas fa-cart-plus" />)}
+             </button>
           </div>
         </div>
         <h3>hello from product</h3>
