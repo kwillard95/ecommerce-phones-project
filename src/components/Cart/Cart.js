@@ -3,31 +3,31 @@ import { ProductConsumer } from '../../context'
 import Title from '../Title'
 import CartColumns from './CartColumns'
 import EmptyCart from './EmptyCart'
+import CartList from './CartList'
 
 
 export default class Cart extends Component {
   render() {
     return (
-
+<section>
       <ProductConsumer>
         {(value) => {
           if (!value.cart.length) {
             return (
-              <section>
                 <EmptyCart />
-              </section>
             )
           } else {
             return (
-              <section>
+              <React.Fragment>
                 <Title name="your" title="cart" />
                 <CartColumns />
-              </section>
+                <CartList value={value}/>
+              </React.Fragment>
             )
           }
         }}
       </ProductConsumer>
-
+      </section>
     )
   }
 }
