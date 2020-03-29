@@ -27,6 +27,8 @@ import React, { Component } from "react";
 import { useSpring, animated } from 'react-spring'
 import * as THREE from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { Link } from 'react-router-dom';
+import {ButtonContainer} from './Button';
 
 export default class Home extends Component {
 
@@ -38,21 +40,21 @@ export default class Home extends Component {
     let headset;
     let aspect = container.clientWidth / container.clientHeight;
     let camera = new THREE.PerspectiveCamera(20, aspect, 0.1, 500);
-    camera.position.set(0,0,5);
+    camera.position.set(0, 0, 5);
 
-    const ambient = new THREE.AmbientLight(0x404040,3);
+    const ambient = new THREE.AmbientLight(0x404040, 3);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff,3);
-    light.position.set(10,10,30);
+    const light = new THREE.DirectionalLight(0xffffff, 3);
+    light.position.set(10, 10, 30);
     scene.add(light);
-    let renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
+    let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     container.prepend(renderer.domElement);
 
     let loader = new GLTFLoader();
-    loader.load('3d/scene.gltf', function(gltf) {
+    loader.load('3d/scene.gltf', function (gltf) {
       scene.add(gltf.scene);
       headset = gltf.scene.children[0];
       animate();
@@ -72,7 +74,10 @@ export default class Home extends Component {
           <div className="container showcase-container">
             <div className="scene mb-1">
               <h1>Are You Ready For A Staycation?</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eum inventore eius ratione officiis nihil quae facilis totam fuga architecto!</p>         
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eum inventore eius ratione officiis nihil quae facilis totam fuga architecto!</p>
+              <Link to="/products">
+                <ButtonContainer>browse experiences</ButtonContainer>
+              </Link>
             </div>
           </div>
         </header>
