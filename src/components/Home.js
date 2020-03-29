@@ -21,7 +21,7 @@ export default class Home extends Component {
           </div>
         </div> */}
         <header id="showcase">
-          <div class="container showcase-container">
+          <div className="container showcase-container">
             <h1>Welcome</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eum inventore eius ratione officiis nihil quae facilis totam fuga architecto!</p>
           </div>
