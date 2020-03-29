@@ -55,6 +55,7 @@ Product.propTypes = {
 const ProductWrapper = styled.div`
   .card{
     border-color: transparent;
+    border-radius: 5px;
     transition: all 1s linear;
     height: 80%
   }
