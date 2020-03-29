@@ -28,7 +28,7 @@ import { useSpring, animated } from 'react-spring'
 import * as THREE from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Link } from 'react-router-dom';
-import {ButtonContainer} from './Button';
+import { ButtonContainer } from './Button';
 
 export default class Home extends Component {
 
@@ -71,22 +71,28 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <header id="showcase">
-          <div className="container showcase-container">
-            <div className="scene" id="scene">
-              <div className="spacer"></div>
-            </div>
-          </div>
-          <div className="info">
-              <h1>Virtual Experiences</h1>
+          <video autoPlay loop id="myVideo">
+            <source src="background.mp4" type="video/mp4"/>
+           </video>
+            <div className="container showcase-container">
+              <div className="spacer" />
+              <div className="scene" id="scene">
+                <div className="spacer">
+                <h1 className="text-blue">Virtual Experiences</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eum inventore eius ratione officiis nihil quae facilis totam fuga architecto!</p>
               <Link to="/products">
-                <ButtonContainer>browse experiences</ButtonContainer>
+                <ButtonContainer cart>browse experiences</ButtonContainer>
               </Link>
-          </div>
+                </div>
+                
+              
+            
+              </div>
+            </div>
         </header>
       </React.Fragment>
-    )
-  }
-}
-
-
+        )
+      }
+    }
+    
+    
