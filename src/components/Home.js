@@ -36,7 +36,7 @@ export default class Home extends Component {
     // === THREE.JS CODE START ===
 
     let scene = new THREE.Scene();
-    let container = document.querySelector('.scene');
+    let container = document.getElementById('scene');
     let headset;
     let aspect = container.clientWidth / container.clientHeight;
     let camera = new THREE.PerspectiveCamera(20, aspect, 0.1, 500);
@@ -72,13 +72,16 @@ export default class Home extends Component {
       <React.Fragment>
         <header id="showcase">
           <div className="container showcase-container">
-            <div className="scene mb-1">
-              <h1>Are You Ready For A Staycation?</h1>
+            <div className="scene" id="scene">
+              <div className="spacer"></div>
+            </div>
+          </div>
+          <div className="info">
+              <h1>Virtual Experiences</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi eum inventore eius ratione officiis nihil quae facilis totam fuga architecto!</p>
               <Link to="/products">
                 <ButtonContainer>browse experiences</ButtonContainer>
               </Link>
-            </div>
           </div>
         </header>
       </React.Fragment>

@@ -9,11 +9,11 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-2">
         <div className="card">
           <ProductConsumer>
             {(value) => (
-              <div className="img-container p-5" onClick={value.handleDetail.bind(null,id)}>
+              <div className="img-container" onClick={value.handleDetail.bind(null,id)}>
               <Link to="/details">
                 <img src={img} alt="product" className="card-img-top" />
               </Link>
@@ -56,6 +56,7 @@ const ProductWrapper = styled.div`
   .card{
     border-color: transparent;
     transition: all 1s linear;
+    height: 80%
   }
   .card-footer{
     background:transparent;
@@ -75,8 +76,10 @@ const ProductWrapper = styled.div`
     position: relative;
     overflow: hidden;
   }
+  
   .card-img-top{
     transition: all 1s linear;
+    width: 100%;
   }
   .img-container:hover .card-img-top{
     transform:scale(1.2);

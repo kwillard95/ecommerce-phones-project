@@ -50,6 +50,11 @@ body {
   color: var(--mainYellow);
 }
 
+.detail-img {
+  height: 500px;
+  width: 400px;
+}
+
 /* HOME CSS */
 
 * {
@@ -116,8 +121,21 @@ body {
   opacity: 0.7;
 }
 
-.vr-icon {
-  width: 200px;
+#scene {
+  height: 200px;
+}
+
+.spacer {
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* MENU CSS */
