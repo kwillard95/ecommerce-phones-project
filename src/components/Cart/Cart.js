@@ -10,25 +10,27 @@ import CartTotals from './CartTotals'
 export default class Cart extends Component {
   render() {
     return (
-<section>
-      <ProductConsumer>
-        {(value) => {
-          if (!value.cart.length) {
-            return (
+      <section>
+        <ProductConsumer>
+          {(value) => {
+            if (!value.cart.length) {
+              return (
                 <EmptyCart />
-            )
-          } else {
-            return (
-              <React.Fragment>
-                <Title name="your" title="cart" />
-                <CartColumns />
-                <CartList value={value}/>
-                <CartTotals value={value} history={this.props.history}/>
-              </React.Fragment>
-            )
-          }
-        }}
-      </ProductConsumer>
+              )
+            } else {
+              return (
+                <React.Fragment>
+                  <div className="container mt-5">
+                    <Title name="your" title="cart" />
+                    <CartColumns />
+                    <CartList value={value} />
+                    <CartTotals value={value} history={this.props.history} />
+                  </div>
+                </React.Fragment>
+              )
+            }
+          }}
+        </ProductConsumer>
       </section>
     )
   }
