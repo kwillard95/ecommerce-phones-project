@@ -79,7 +79,7 @@ export default class Home extends Component {
               <div className="scene" id="scene">
                 <div className="spacer">
                 <h1 className="text-blue">Virtual Experiences</h1>
-              <p>Stuck at home in quarantine wishing you could go somewhere? Have yourself a virtual adventure right from the comfort of your own home!</p>
+              <p>Bored at home in quarantine and itching to go on an adventure? Have yourself a virtual adventure from the comfort of your own home!</p>
               <Link to="/products">
                 <ButtonContainer cart>browse experiences</ButtonContainer>
               </Link>
