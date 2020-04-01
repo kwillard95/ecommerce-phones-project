@@ -74,7 +74,7 @@ export default class Home extends Component {
           <video autoPlay loop id="myVideo">
             <source src="background.mp4" type="video/mp4"/>
            </video>
-            <div className="container showcase-container">
+            <div className="home-container showcase-container">
               <div className="spacer" />
               <div className="scene" id="scene">
                 <div className="spacer">
