@@ -53,6 +53,7 @@ body {
 .detail-img {
   height: 500px;
   width: 400px;
+  margin-left: 4rem;
 }
 
 /* HOME CSS */
