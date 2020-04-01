@@ -24,7 +24,6 @@
 // }
 
 import React, { Component } from "react";
-import { useSpring, animated } from 'react-spring'
 import * as THREE from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Link } from 'react-router-dom';
