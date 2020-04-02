@@ -56,6 +56,21 @@ body {
   margin-left: 4rem;
 }
 
+@media only screen and (max-width: 995px) {
+  .detail-img {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .dt-experience, .dt-price, .dt-more, .dt-more-info, .dt-buttons {
+    text-align: center;
+  }
+}
+
 /* HOME CSS */
 
 * {

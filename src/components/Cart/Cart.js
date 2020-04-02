@@ -20,7 +20,7 @@ export default class Cart extends Component {
             } else {
               return (
                 <React.Fragment>
-                  <div className="container mt-5">
+                  <div className="container mt-3">
                     <Title name="your" title="cart" />
                     <CartColumns />
                     <CartList value={value} />

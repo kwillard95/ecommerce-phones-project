@@ -10,10 +10,10 @@ export default class Details extends Component {
         {(value) => {
           const { id, img, price, info, title, inCart } = value.detailProduct;
           return (
-            <div className="container py-5">
+            <div className="container py-5 overflow-hidden">
               {/* title */}
               <div className="row">
-                <div className="col-10 mx-auto text-center text-slanted my-5">
+                <div className="col-10 mx-auto text-center text-slanted my-3">
                   <h1>{title}</h1>
                 </div>
               </div>
@@ -21,23 +21,20 @@ export default class Details extends Component {
               {/* product info */}
               <div className="row">
                 <div className="col-10 mx-auto col-md-6">
-                  <div className="detail-img">
-                  <img src={img} alt="product" className="h-100"/>
+                  <div className="detail-img mx-auto">
+                  <img src={img} alt="product" className="h-100" style={{borderRadius: '5px'}}/>
                   </div>
                 </div>
                 {/* product text */}
                 <div className="col-10 mx-auto col-md-6">
-                  <h2 className="text-capitalize">experience : {title}</h2>
-                  {/* <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                    made by : <span className="text-uppercase">{company}</span>
-                  </h4> */}
-                  <h4 className="text-blue">
+                  <h2 className="dt-experience text-capitalize">experience : {title}</h2>
+                  <h4 className="dt-price text-blue">
                     <strong className="text-capitalize">price : ${price}</strong>
                   </h4>
-                  <p className="text-capitalize font-weight-bold mt-3 mb-0">more about this virtual experience:</p>
-                  <p className="text-muted lead">{info}</p>
+                  <p className="dt-more text-capitalize font-weight-bold mt-2 mb-0">more about this virtual experience:</p>
+                  <p className="dt-more-info text-muted lead">{info}</p>
                   {/* buttons */}
-                  <div>
+                  <div className="dt-buttons">
                     <Link to='/products'>
                       <ButtonContainer>
                         back to products
